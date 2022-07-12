@@ -36,15 +36,16 @@ public class MonthlyReport {
   // Подсчитывать две суммы: общие доходы и общие расходы по каждому из месяцев.
 
 // ЗДЕСЬ НЕ ВЫХОДИТ РАЗБИТЬ СУММЫ ПО МЕСЯЦАМ
-    int income() {
+    int income1() {
         int sum = 0;
         for (MonthRecord row : rows) {
-            for (int i = 1; i <= 3; i++) {
-                if (!row.isExpense && row.month = i) {
+                if (!row.isExpense) {
+                    if (row.month = 1) {
                     sum += row.quantity * row.sumOfOne;
                 }
             }
         }
+
         return sum;
     }
 // Здесь считается за все месяцы
