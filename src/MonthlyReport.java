@@ -20,14 +20,13 @@ public class MonthlyReport {
                 int sumOfOne = Integer.parseInt(parts[3]);
 
                 rows.add(new MonthRecord(i, itemName, isExpense, quantity, sumOfOne));
-
-
             }
         }
     }
     public void printMonthlyReport() {
         for (MonthRecord row : rows) {
-            System.out.println(row.month + " " + row.itemName + " " + row.isExpense + " " + row.quantity + " " + row.sumOfOne);
+            System.out.println(row.month + " " + row.itemName + " " +
+                    row.isExpense + " " + row.quantity + " " + row.sumOfOne);
         }
     }
     private String readFileContentsOrNull(String path) {

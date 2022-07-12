@@ -18,16 +18,20 @@ public class Main {
 
             if (userInput == 1) {
                 // Считать все месячные отчёты
-                monthlyReport.printMonthlyReport();
+
             } else if (userInput == 2) {
                 // Считать годовой отчёт
-                yearlyReport.printYearlyReport();
+
             } else if (userInput == 3) {
                 // Сверить отчёты
             } else if (userInput == 4) {
                 // Вывести информацию о всех месячных отчётах
+                System.out.println("Информация о всех месячных отчётах:");
+                monthlyReport.printMonthlyReport();
             } else if (userInput == 5) {
                 // Вывести информацию о годовом отчёте
+                System.out.println("Информация о годовом отчёте:");
+                yearlyReport.printYearlyReport();
             } else if (userInput == 0) {
                 System.out.println("Вы вышли из программы!");
                 break;
