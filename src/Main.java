@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Main {
 
@@ -7,7 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         MonthlyReport monthlyReport = new MonthlyReport();
-        YearlyReport yearlyReport = new YearlyReport();
+        YearlyReport yearlyReport = new YearlyReport(2021, "resources/y.2021.csv");
 
         while (true) {
             printMenu();
@@ -15,8 +18,10 @@ public class Main {
 
             if (userInput == 1) {
                 // Считать все месячные отчёты
+                monthlyReport.printMonthlyReport();
             } else if (userInput == 2) {
                 // Считать годовой отчёт
+                yearlyReport.printYearlyReport();
             } else if (userInput == 3) {
                 // Сверить отчёты
             } else if (userInput == 4) {
@@ -24,21 +29,21 @@ public class Main {
             } else if (userInput == 5) {
                 // Вывести информацию о годовом отчёте
             } else if (userInput == 0) {
-                System.out.println("Выход");
+                System.out.println("Вы вышли из программы!");
                 break;
             } else {
-                System.out.println("Извините, такой команды нет")
+                System.out.println("Извините, такой команды нет");
             }
         }
     }
         public static void printMenu() {
-            System.out.print("Выберите пункт меню");
-            System.out.print("1 - Считать все месячные отчёты");
-            System.out.print("2 - Считать годовой отчёт");
-            System.out.print("3 - Сверить отчёты");
-            System.out.print("4 - Вывести информацию о всех месячных отчётах");
-            System.out.print("5 - Вывести информацию о годовом отчёте");
-            System.out.print("0 - Выход из программы");
+            System.out.println("Выберите пункт меню:");
+            System.out.println("1 - Считать все месячные отчёты");
+            System.out.println("2 - Считать годовой отчёт");
+            System.out.println("3 - Сверить отчёты");
+            System.out.println("4 - Вывести информацию о всех месячных отчётах");
+            System.out.println("5 - Вывести информацию о годовом отчёте");
+            System.out.println("0 - Выход из программы");
         }
 
 }
