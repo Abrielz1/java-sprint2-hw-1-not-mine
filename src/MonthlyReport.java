@@ -23,7 +23,54 @@ public class MonthlyReport {
             }
         }
     }
-    public void printMonthlyReport() {
+
+    /*
+    При вызове сверки данных программа должна:
+    1. Подсчитывать две суммы: общие доходы и общие расходы по каждому из месяцев.
+    2. Сверять полученные суммы с суммой доходов и расходов в отчёте по году.
+    Если обнаружена ошибка, программа должна выводить месяц, в котором обнаружено несоответствие.
+    Если ошибок не обнаружено, должна выводиться только информация об успешном завершении операции.
+
+ */
+
+  // Подсчитывать две суммы: общие доходы и общие расходы по каждому из месяцев.
+
+// ЗДЕСЬ НЕ ВЫХОДИТ РАЗБИТЬ СУММЫ ПО МЕСЯЦАМ
+    int income() {
+        int sum = 0;
+        for (MonthRecord row : rows) {
+            for (int i = 1; i <= 3; i++) {
+                if (!row.isExpense && row.month = i) {
+                    sum += row.quantity * row.sumOfOne;
+                }
+            }
+        }
+        return sum;
+    }
+// Здесь считается за все месяцы
+    int income() {
+        int sum = 0;
+        for (MonthRecord row : rows) {
+            if (!row.isExpense) {
+                sum += row.quantity * row.sumOfOne;
+            }
+        }
+        return sum;
+    }
+
+    int expense() {
+        int sum = 0;
+        for (MonthRecord row : rows) {
+            if (row.isExpense) {
+                sum += row.quantity * row.sumOfOne;
+            }
+        }
+        return sum;
+    }
+
+
+
+    void printMonthlyReport() {
         for (MonthRecord row : rows) {
             System.out.println(row.month + " " + row.itemName + " " +
                     row.isExpense + " " + row.quantity + " " + row.sumOfOne);

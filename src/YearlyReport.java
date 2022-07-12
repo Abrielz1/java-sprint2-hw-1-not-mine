@@ -4,11 +4,11 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class YearlyReport {
-    int year;
+   // int year;
     ArrayList<YearRecord> rows = new ArrayList<>();
 
-    public YearlyReport(int year, String path) {
-        String content = readFileContentsOrNull(path);
+     public YearlyReport() {
+        String content = readFileContentsOrNull("resources/y.2021.csv");
         String[] lines = content.split("\r?\n");
         for (int i = 1; i < lines.length; i++) {
             String line = lines[i];
