@@ -12,6 +12,8 @@ public class MonthlyReport {
 
     //HashMap<Integer, ArrayList<MonthRecord>> reportOfMonth = new HashMap<>();
 
+
+
     // Метод заполняет списки rows - rows3
     public MonthlyReport() {
         for (int i = 1; i <= 3; i++) {
