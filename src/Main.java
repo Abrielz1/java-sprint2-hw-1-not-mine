@@ -10,7 +10,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         MonthlyReport monthlyReport = new MonthlyReport();
-        YearlyReport yearlyReport = new YearlyReport(/*2021, "resources/y.2021.csv"*/);
+        YearlyReport yearlyReport = new YearlyReport(2021/*, "resources/y.2021.csv"*/);
         DataReconciliation dataReconciliation = new DataReconciliation();
 
         while (true) {
@@ -27,8 +27,8 @@ public class Main {
                 System.out.println("Годовой отчёт считан!");
             } else if (userInput == 3) {
                 // Сверить отчёты
-                System.out.println("Доходы: " + monthlyReport.income());
-                System.out.println("Расходы: " + monthlyReport.expense());
+                dataReconciliation.reconciliation();
+
             } else if (userInput == 4) {
                 // Вывести информацию о всех месячных отчётах
                 System.out.println("Информация о всех месячных отчётах:");
@@ -36,7 +36,10 @@ public class Main {
             } else if (userInput == 5) {
                 // Вывести информацию о годовом отчёте
                 System.out.println("Информация о годовом отчёте:");
+                System.out.println("Рассматриваемый год: 2021");
+                yearlyReport.profitMonthly();
                 yearlyReport.printYearlyReport();
+
             } else if (userInput == 0) {
                 System.out.println("Вы вышли из программы!");
                 break;
