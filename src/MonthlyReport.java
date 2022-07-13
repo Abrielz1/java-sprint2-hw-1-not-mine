@@ -201,17 +201,6 @@ public class MonthlyReport {
     }
 
 
-    void printMonthlyReportTest() {
-        for (MonthRecord row : rows1) {
-            System.out.println(row.month + " " + row.itemName + " " +
-                    row.isExpense + " " + row.quantity + " " + row.sumOfOne);
-        }
-    }
-
-
-
-
-
     private String readFileContentsOrNull(String path) {
         try {
             return Files.readString(Path.of(path));
