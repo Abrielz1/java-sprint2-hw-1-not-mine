@@ -5,12 +5,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class YearlyReport {
+
+    ReadYearlyReport readYearlyReport = new ReadYearlyReport();
+
+//    ArrayList<YearRecord> rows = rows;
+
+
    int year;
     ArrayList<YearRecord> rows = new ArrayList<>();
 
    // HashMap<Integer, ArrayList<YearRecord>> reportYearly = new HashMap<>();
 
-     public YearlyReport(int year) {
+     public void getYearlyReport() {
         String content = readFileContentsOrNull("resources/y.2021.csv");
         String[] lines = content.split("\r?\n");
         for (int i = 1; i < lines.length; i++) {

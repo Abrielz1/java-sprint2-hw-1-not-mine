@@ -7,10 +7,13 @@ public class DataReconciliation {
     Если ошибок не обнаружено, должна выводиться только информация об успешном завершении операции.
 
  */
+
     MonthlyReport monthlyReport = new MonthlyReport();
-    YearlyReport yearlyReport = new YearlyReport(2021);
+    YearlyReport yearlyReport = new YearlyReport();
 
     public void reconciliation() {
+
+
         if (monthlyReport.incomeOfMonth1() == yearlyReport.getIncome1() && monthlyReport.expenseOfMonth1() == yearlyReport.getExpense1()) {
 
         } else {
@@ -32,4 +35,3 @@ public class DataReconciliation {
     }
 
 
-}

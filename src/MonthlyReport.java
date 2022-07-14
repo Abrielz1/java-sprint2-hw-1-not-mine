@@ -4,6 +4,9 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class MonthlyReport {
+    
+    ReadMonthlyReport readMonthlyReport = new ReadMonthlyReport();
+    
 
     ArrayList<MonthRecord> rows = new ArrayList<>(); // Список отчёта за все месяцы
     ArrayList<MonthRecord> rows1 = new ArrayList<>(); // Список отчёта за 1-й месяц Январь
@@ -15,7 +18,7 @@ public class MonthlyReport {
 
 
     // Метод заполняет списки rows - rows3
-    public MonthlyReport() {
+    public void getMonthlyReport() {
         for (int i = 1; i <= 3; i++) {
             String content = readFileContentsOrNull("resources/m.20210" + i + ".csv");
             String[] lines = content.split("\r?\n");
@@ -34,7 +37,7 @@ public class MonthlyReport {
                 } if ( i == 2) {
                     rows2.add(new MonthRecord(i, itemName, isExpense, quantity, sumOfOne));
                 } if ( i == 3) {
-                    rows3.add(new MonthRecord(i, itemName, isExpense, quantity, sumOfOne));
+                   rows3.add(new MonthRecord(i, itemName, isExpense, quantity, sumOfOne));
                 }
             }
         }

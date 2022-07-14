@@ -12,7 +12,7 @@ public class Main {
         ReadMonthlyReport readMonthlyReport = new ReadMonthlyReport();
         ReadYearlyReport readyearlyReport = new ReadYearlyReport();
         MonthlyReport monthlyReport = new MonthlyReport();
-        YearlyReport yearlyReport = new YearlyReport(2021);
+        YearlyReport yearlyReport = new YearlyReport();
         DataReconciliation dataReconciliation = new DataReconciliation();
 
         while (true) {
@@ -21,11 +21,11 @@ public class Main {
 
             if (userInput == 1) {
                 // Считать все месячные отчёты
-                readMonthlyReport.readOfMonthlyReport();
+                monthlyReport.getMonthlyReport();
                 System.out.println("Все месячные отчёты считаны!\n");
             } else if (userInput == 2) {
                 // Считать годовой отчёт
-                readyearlyReport.readOfYearlyReport();
+                yearlyReport.getYearlyReport();
                 System.out.println("Годовой отчёт считан!\n");
             } else if (userInput == 3) {
                 // Сверить отчёты
