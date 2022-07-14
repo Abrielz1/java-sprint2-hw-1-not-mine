@@ -5,10 +5,7 @@ import java.util.ArrayList;
 
 public class MonthlyReport {
     
-    ReadMonthlyReport readMonthlyReport = new ReadMonthlyReport();
-    
-
-    ArrayList<MonthRecord> rows = new ArrayList<>(); // Список отчёта за все месяцы
+ArrayList<MonthRecord> rows = new ArrayList<>(); // Список отчёта за все месяцы
     ArrayList<MonthRecord> rows1 = new ArrayList<>(); // Список отчёта за 1-й месяц Январь
     ArrayList<MonthRecord> rows2 = new ArrayList<>(); // Список отчёта за 2-й месяц Февраль
     ArrayList<MonthRecord> rows3 = new ArrayList<>(); // Список отчёта за 3-й месяц Март

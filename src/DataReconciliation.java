@@ -29,8 +29,8 @@ public class DataReconciliation {
         } else {
             System.out.println("В марте обнаружено несоответствие. Проверьте исходные данные!");
         }
-            System.out.println("Операция успешно завершена!");
-
+        System.out.println("Операция успешно завершена!");
+    }
 
     }
 

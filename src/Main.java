@@ -9,8 +9,6 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        ReadMonthlyReport readMonthlyReport = new ReadMonthlyReport();
-        ReadYearlyReport readyearlyReport = new ReadYearlyReport();
         MonthlyReport monthlyReport = new MonthlyReport();
         YearlyReport yearlyReport = new YearlyReport();
         DataReconciliation dataReconciliation = new DataReconciliation();
