@@ -6,11 +6,9 @@ import java.util.HashMap;
 
 public class YearlyReport {
     int year;
-    ArrayList<YearRecord> rows = new ArrayList<>();
+  ArrayList<YearRecord> rows = new ArrayList<>();
 
-   // HashMap<Integer, ArrayList<YearRecord>> reportYearly = new HashMap<>();
-
-     public void getYearlyReport() {
+     public void YearlyReport() {
         String content = readFileContentsOrNull("resources/y.2021.csv");
         String[] lines = content.split("\r?\n");
         for (int i = 1; i < lines.length; i++) {
@@ -34,7 +32,7 @@ public class YearlyReport {
     4. Средний доход за все месяцы в году.
 
  */
-//Метод выводит на печать годовой отчёт
+// Метод выводит на печать годовой отчёт
     public void printYearlyReport() {
 
         //System.out.println("Прибыль за год: " + profitYearly());

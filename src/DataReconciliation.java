@@ -12,7 +12,14 @@ public class DataReconciliation {
     YearlyReport yearlyReport = new YearlyReport();
 
     public void reconciliation() {
-
+      // monthlyReport.MonthlyReport();
+      // yearlyReport.YearlyReport();
+       System.out.println("проверка на заполнение месячной " + monthlyReport.rows);
+       System.out.println("проверка на заполнение годовой " + yearlyReport.rows);
+      if (monthlyReport.rows.isEmpty() && yearlyReport.rows.isEmpty()) {
+            System.out.println("Отчёты не считаны!");
+            System.out.println("Пожалуйста, считайте месячные и годовой отчёты!");
+        } else
 
         if (monthlyReport.incomeOfMonth1() == yearlyReport.getIncome1() && monthlyReport.expenseOfMonth1() == yearlyReport.getExpense1()) {
 
@@ -29,7 +36,7 @@ public class DataReconciliation {
         } else {
             System.out.println("В марте обнаружено несоответствие. Проверьте исходные данные!");
         }
-        System.out.println("Операция успешно завершена!");
+        System.out.println("Операция успешно завершена!\n");
     }
 
     }

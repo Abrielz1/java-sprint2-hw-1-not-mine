@@ -19,12 +19,14 @@ public class Main {
 
             if (userInput == 1) {
                 // Считать все месячные отчёты
-                monthlyReport.getMonthlyReport();
+                monthlyReport.MonthlyReport();
                 System.out.println("Все месячные отчёты считаны!\n");
+
             } else if (userInput == 2) {
                 // Считать годовой отчёт
-                yearlyReport.getYearlyReport();
+                yearlyReport.YearlyReport();
                 System.out.println("Годовой отчёт считан!\n");
+
             } else if (userInput == 3) {
                 // Сверить отчёты
                 dataReconciliation.reconciliation();
@@ -33,6 +35,7 @@ public class Main {
                 // Вывести информацию о всех месячных отчётах
                 System.out.println("Информация о всех месячных отчётах:");
                 monthlyReport.printMonthlyReport();
+
             } else if (userInput == 5) {
                 // Вывести информацию о годовом отчёте
                 System.out.println("Информация о годовом отчёте:");
